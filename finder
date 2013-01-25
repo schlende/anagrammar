@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require_relative 'anagrammar'
+
+anagrammar = Anagrammar.new()
+
+puts "Loading dictionary"
+anagrammar.load_words("dictionaries/words")
+puts "Done loading"
+
+input = ""
+
+while input != "exit"
+	puts "Anagrams for: "
+	input = gets
+
+	anagrams = anagrammar.get_anagrams_for(input)
+
+	puts "_______________________________"
+	anagrams.each do | anagram |
+		puts anagram
+	end
+	puts "_______________________________"
+end
