@@ -1,0 +1,4 @@
+anagrammar
+==========
+
+Ruby anagram solver
